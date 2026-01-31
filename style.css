@@ -117,6 +117,36 @@ body {
   font-weight: 900;
 }
 
+/* Floating Decorative Icons in Hero */
+.hero-icon {
+  position: absolute;
+  z-index: 10;
+  animation: float-alt 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.icon-flame {
+  width: 100px;
+  top: 15%;
+  left: 22%; /* Significantly closer */
+  animation-delay: 0s;
+}
+
+.icon-heart {
+  width: 100px;
+  bottom: 20%;
+  right: 22%; /* Significantly closer */
+  animation-delay: 1.5s;
+}
+
+.icon-bolt {
+  width: 60px;
+  top: 12%;
+  right: 25%; /* Significantly closer */
+  animation-delay: 0.8s;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+}
+
 /* Decorative Floating Icons */
 .floating-icon {
   position: absolute;
@@ -133,6 +163,16 @@ body {
   bottom: 20%;
   right: 10%;
   animation-delay: 3s;
+}
+
+@keyframes float-alt {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
 }
 
 @keyframes float {
@@ -180,6 +220,22 @@ body {
   .phone-mockup {
     max-height: 400px;
     margin-bottom: 40px;
+  }
+  .hero-icon {
+    width: 60px !important;
+  }
+  .icon-flame {
+    left: 20%;
+    top: 10%;
+  }
+  .icon-heart {
+    right: 20%;
+    bottom: 25%;
+  }
+  .icon-bolt {
+    right: 25%;
+    top: 5%;
+    width: 40px !important;
   }
 }
 
