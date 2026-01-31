@@ -53,6 +53,20 @@ body {
   color: var(--text-primary) !important;
 }
 
+/* Navbar */
+.navbar {
+  background: rgba(
+    10,
+    5,
+    16,
+    0.85
+  ) !important; /* Dark semi-transparent background */
+  backdrop-filter: blur(12px); /* Glass blur effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 90vh;
@@ -277,6 +291,40 @@ body {
   flex: 1;
   margin: 0 20px;
   max-width: 100px;
+}
+
+/* FAQ Accordion */
+.accordion-item {
+  background: transparent;
+  border: none;
+  margin-bottom: 15px;
+}
+.accordion-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px !important;
+  font-weight: 600;
+  box-shadow: none !important;
+  padding: 20px;
+}
+.accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+.accordion-button::after {
+  filter: invert(1);
+}
+.accordion-body {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  color: var(--text-secondary);
+  padding: 20px;
+  margin-top: -5px;
 }
 
 /* Footer */
